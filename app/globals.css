@@ -1,0 +1,374 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-nunito), Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 350 100% 98%;
+    --foreground: 0 0% 29%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 29%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 29%;
+    --primary: 350 100% 86%;
+    --primary-foreground: 0 0% 29%;
+    --secondary: 250 38% 92%;
+    --secondary-foreground: 0 0% 29%;
+    --muted: 250 38% 92%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 0 0% 29%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 350 50% 90%;
+    --input: 350 50% 90%;
+    --ring: 350 100% 86%;
+    --chart-1: 350 100% 86%;
+    --chart-2: 250 38% 92%;
+    --chart-3: 45 100% 50%;
+    --chart-4: 165 100% 85%;
+    --chart-5: 180 100% 75%;
+    --radius: 1.875rem;
+    --sidebar-background: 350 100% 98%;
+    --sidebar-foreground: 0 0% 29%;
+    --sidebar-primary: 350 100% 86%;
+    --sidebar-primary-foreground: 0 0% 29%;
+    --sidebar-accent: 250 38% 92%;
+    --sidebar-accent-foreground: 0 0% 29%;
+    --sidebar-border: 350 50% 90%;
+    --sidebar-ring: 350 100% 86%;
+  }
+  .dark {
+    --background: 350 30% 8%;
+    --foreground: 0 0% 98%;
+    --card: 350 30% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 350 30% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 350 80% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 250 25% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 250 25% 20%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 45 90% 45%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 350 30% 18%;
+    --input: 350 30% 18%;
+    --ring: 350 80% 60%;
+    --chart-1: 350 80% 60%;
+    --chart-2: 250 25% 40%;
+    --chart-3: 45 90% 45%;
+    --chart-4: 165 80% 50%;
+    --chart-5: 180 80% 60%;
+    --sidebar-background: 350 30% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 350 80% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 250 25% 20%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 350 30% 18%;
+    --sidebar-ring: 350 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Valentine's Day Animations */
+.floating-element {
+  position: fixed;
+  font-size: 2rem;
+  opacity: 0.4;
+  z-index: 1;
+  animation: floatUp 15s infinite ease-in-out;
+}
+
+.heart-1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.heart-2 {
+  top: 60%;
+  left: 85%;
+  animation-delay: 2s;
+}
+
+.heart-3 {
+  top: 30%;
+  right: 15%;
+  animation-delay: 4s;
+}
+
+.heart-4 {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 6s;
+}
+
+.bunny {
+  position: fixed;
+  font-size: 3rem;
+  opacity: 0.4;
+  z-index: 1;
+  animation: hop 40s linear infinite;
+}
+
+.bunny-1 {
+  bottom: 10%;
+  animation-delay: 0s;
+}
+
+.bunny-2 {
+  bottom: 15%;
+  animation-delay: 20s;
+}
+
+.bird {
+  position: fixed;
+  font-size: 2.5rem;
+  opacity: 0.4;
+  z-index: 1;
+  animation: fly 60s linear infinite;
+}
+
+.bird-1 {
+  top: 15%;
+  animation-delay: 0s;
+}
+
+.bird-2 {
+  top: 25%;
+  animation-delay: 30s;
+}
+
+.butterfly {
+  position: fixed;
+  font-size: 2rem;
+  opacity: 0.5;
+  z-index: 1;
+  animation: flutter 25s ease-in-out infinite;
+}
+
+.butterfly-1 {
+  top: 40%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.butterfly-2 {
+  top: 50%;
+  right: 10%;
+  animation-delay: 8s;
+}
+
+.butterfly-3 {
+  bottom: 30%;
+  left: 70%;
+  animation-delay: 16s;
+}
+
+.cloud {
+  position: fixed;
+  font-size: 4rem;
+  opacity: 0.3;
+  z-index: 0;
+  animation: drift 80s linear infinite;
+}
+
+.cloud-1 {
+  top: 5%;
+  animation-delay: 0s;
+}
+
+.cloud-2 {
+  top: 50%;
+  animation-delay: 27s;
+}
+
+.cloud-3 {
+  top: 75%;
+  animation-delay: 53s;
+}
+
+.floating-heart {
+  position: fixed;
+  font-size: 2rem;
+  animation: floatUpFade 4s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.confetti-particle {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  border-radius: 50%;
+  animation: confettiFall 4s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Keyframe Animations */
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.1);
+  }
+}
+
+@keyframes hop {
+  0% {
+    transform: translateX(-100px) translateY(0) scaleX(1);
+  }
+  25% {
+    transform: translateX(25vw) translateY(-20px) scaleX(1);
+  }
+  50% {
+    transform: translateX(50vw) translateY(0) scaleX(-1);
+  }
+  75% {
+    transform: translateX(75vw) translateY(-20px) scaleX(-1);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) translateY(0) scaleX(-1);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(-100px) translateY(0);
+  }
+  25% {
+    transform: translateX(25vw) translateY(-40px);
+  }
+  50% {
+    transform: translateX(50vw) translateY(-20px);
+  }
+  75% {
+    transform: translateX(75vw) translateY(-50px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) translateY(-30px);
+  }
+}
+
+@keyframes flutter {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(100px, -50px) rotate(10deg);
+  }
+  50% {
+    transform: translate(50px, -100px) rotate(-10deg);
+  }
+  75% {
+    transform: translate(-50px, -50px) rotate(5deg);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 200px));
+  }
+}
+
+@keyframes floatUpFade {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-200px) scale(1.5) rotate(360deg);
+  }
+}
+
+@keyframes confettiFall {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating-element {
+    font-size: 1.5rem;
+  }
+  
+  .bunny {
+    font-size: 2rem;
+  }
+  
+  .bird {
+    font-size: 2rem;
+  }
+  
+  .butterfly {
+    font-size: 1.5rem;
+  }
+  
+  .cloud {
+    font-size: 3rem;
+  }
+  
+  .floating-heart {
+    font-size: 1.5rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom font utilities */
+.font-quicksand {
+  font-family: var(--font-quicksand), sans-serif;
+}
+
+.font-nunito {
+  font-family: var(--font-nunito), sans-serif;
+}
